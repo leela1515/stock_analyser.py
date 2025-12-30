@@ -12,18 +12,18 @@ import matplotlib.pyplot as plt
 st.set_page_config(page_title="Simple Stock Analyzer", layout="centered")
 
 st.title("📊 Simple Stock Analyzer")
-st.caption("Made for normal investors • No finance jargon")
+st.caption("Made for beginner investors")
 
 # ---------------- MODE SELECTION ----------------
 mode = st.radio(
     "How do you want to analyse the stock?",
-    ["🔢 Enter values manually", "🌐 Fetch live data using stock name"]
+    [" Enter values manually", " Fetch live data using stock name"]
 )
 
 st.divider()
 
 # ---------------- INPUTS ----------------
-if mode == "🔢 Enter values manually":
+if mode == " Enter values manually":
     roe = st.number_input("Profit efficiency (ROE %) ", min_value=0.0)
     pe = st.number_input("Share Price vs Earnings (P/E)", min_value=0.0)
     pb = st.number_input("Share Price vs Company Value (P/B)", min_value=0.0)
@@ -151,3 +151,4 @@ ax.set_ylim(0, 2)
 st.pyplot(fig)
 
 st.caption("⚠ Educational tool. Always combine with long-term thinking.")
+
